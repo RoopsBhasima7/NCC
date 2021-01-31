@@ -1,0 +1,27 @@
+@model List<Book>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Isbn</th>
+      <th scope="col">Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+        @foreach (var bookL in Model)
+        {
+        <tr>
+            <th scope="col">@bookL.Isbn</th>
+            <td scope="col">@bookL.Name</td>
+            <td scope="col">@bookL.Author</td> 
+            <td>
+                <a class="text-dark" asp-area="" asp-controller="Book" asp-action="BookList">
+                    @bookL.Price
+                </a>
+            </td>
+        </tr>
+        }
+  </tbody>
+</table>

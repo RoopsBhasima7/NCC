@@ -18,6 +18,10 @@ namespace NCC.Controllers
             _logger = logger;
         }
 
+        public string Test(){
+            return "This is test page.";
+        }
+
         public IActionResult Index()
         {
             return View();
