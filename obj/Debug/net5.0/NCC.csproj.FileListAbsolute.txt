@@ -40,3 +40,4 @@ C:\Users\user\Desktop\NCC\obj\Debug\net5.0\NCC.pdb
 C:\Users\user\Desktop\NCC\obj\Debug\net5.0\NCC.genruntimeconfig.cache
 C:\Users\user\Desktop\NCC\obj\Debug\net5.0\NCC.csproj.CopyComplete
 C:\Users\user\Desktop\NCC\obj\Debug\net5.0\Razor\Views\Book\BookList.cshtml.g.cs
+C:\Users\user\Desktop\NCC\obj\Debug\net5.0\Razor\Views\Employee\employeeList.cshtml.g.cs

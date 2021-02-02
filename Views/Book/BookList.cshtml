@@ -1,5 +1,33 @@
 @model List<Book>
 
+<script>
+  
+
+function curr(idBook){
+  
+  let conv = document.getElementById(idBook); 
+  let str = parseFloat(conv.innerHTML);
+  let dollar = conv.dataset.bool; 
+  
+  let idSign = String(idBook)+String(idBook);
+
+  let sn = document.getElementById(idSign);
+
+  if(dollar=="true"){
+  sn.innerHTML = "Nrs.";
+  conv.innerHTML = str*119.12; 
+  conv.dataset.bool = "false";
+  }
+  if(dollar=="false"){
+  sn.innerHTML = "$";
+  conv.innerHTML = str/119.12; 
+  conv.dataset.bool = "true";
+
+  }
+
+}
+</script>
+
 <table class="table">
   <thead>
     <tr>
@@ -16,10 +44,19 @@
             <th scope="col">@bookL.Isbn</th>
             <td scope="col">@bookL.Name</td>
             <td scope="col">@bookL.Author</td> 
-            <td>
-                <a class="text-dark" asp-area="" asp-controller="Book" asp-action="BookList">
-                    @bookL.Price
-                </a>
+            <td >
+              <style>
+                .price{
+                  cursor: pointer; width:200px;
+                }
+                .price:hover{
+                  text-decoration: underline;
+                }
+              </style>
+                <span onclick="curr(@bookL.Isbn)" class="price">
+                  <span id="@bookL.Isbn@bookL.Isbn">$</span>
+                  <span id="@bookL.Isbn"  data-bool="true">@bookL.Price</span>
+                </span>
             </td>
         </tr>
         }
